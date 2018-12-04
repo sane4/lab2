@@ -8,9 +8,9 @@ using namespace std;
 int main(){
 	setlocale(LC_ALL, "");
 	ifstream in("input.txt");
-	string line;//предложение
-	stringstream ss;//строковый поток
-	while(getline(in, line)){//считываем по предложению
+	string line;//РїСЂРµРґР»РѕР¶РµРЅРёРµ
+	stringstream ss;//СЃС‚СЂРѕРєРѕРІС‹Р№ РїРѕС‚РѕРє
+	while(getline(in, line)){//СЃС‡РёС‚С‹РІР°РµРј РїРѕ РїСЂРµРґР»РѕР¶РµРЅРёСЋ
 		bool ff = false, space = true;
 		int i;
 		for(i = 0; i < line.size(); ++i){
@@ -28,7 +28,7 @@ int main(){
 		}
 	}
 	cout << ss.str();
-	in.close();//закрываем файл										   
+	in.close();//Р·Р°РєСЂС‹РІР°РµРј С„Р°Р№Р»										   
 	system("pause>>void");
 
 }
