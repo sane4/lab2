@@ -7,9 +7,12 @@ using namespace std;
 
 int main(){
 	setlocale(LC_ALL, "");
-	ifstream in("input.txt");
-	string line;//предложение
-	stringstream ss;//строковый поток
+	for(int i=0; i < files; ++i){
+		try{
+			cout << '\n' << names[i] << '\n';
+			ifstream in(names[i]);
+			string line;//предложение
+			stringstream ss;//строковый поток
 	while(getline(in, line)){//считываем по предложению
 		bool ff = false, space = true;
 		int i;
@@ -30,5 +33,8 @@ int main(){
 	cout << ss.str();
 	in.close();//закрываем файл										   
 	system("pause>>void");
-
+		}
+		catch(...){
+			cout << "Исключение";
+		}
 }
